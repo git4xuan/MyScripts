@@ -1,0 +1,16 @@
+#!/bin/bash
+# for CentOS6 Only
+
+touch /etc/yum.repos.d/linuxtech.repo
+
+echo "[linuxtech]"  >> /etc/yum.repos.d/linuxtech.repo
+echo  "name=LinuxTECH"  >> /etc/yum.repos.d/linuxtech.repo
+echo  "baseurl=http://pkgrepo.linuxtech.net/el6/release/"  >> /etc/yum.repos.d/linuxtech.repo
+echo  "enabled=1"  >> /etc/yum.repos.d/linuxtech.repo
+echo  "gpgcheck=1"  >> /etc/yum.repos.d/linuxtech.repo
+echo  "gpgkey=http://pkgrepo.linuxtech.net/el6/release/RPM-GPG-KEY-LinuxTECH.NET"  >> /etc/yum.repos.d/linuxtech.repo
+
+yum install deluge -y
+
+deluged
+deluge-web --fork
