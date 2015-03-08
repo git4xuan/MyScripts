@@ -45,7 +45,7 @@ MaxAuthTries 3
 MaxSessions 5
 
 RSAAuthentication yes
-PubkeyAuthentication yes
+PubkeyAuthentication no
 AuthorizedKeysFile	.ssh/authorized_keys
 #AuthorizedKeysCommand none
 #AuthorizedKeysCommandRunAs nobody
